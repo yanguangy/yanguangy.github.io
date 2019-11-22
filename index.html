@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8"/>
+    <title>精于</title>
+    <meta name="description" content=""/>
+    <meta name="viewport" content="width=640, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <script src="js/libs/zepto.min.js"></script>
+    <script src="js/libs/bone.min.js"></script>
+    <script src="js/libs/css3d.min.js"></script>
+    <script src="js/libs/orienter.min.js"></script>
+    <script src="js/libs/jstween.min.js"></script>
+
+    <style>
+        html, body {
+            margin: 0px;
+            width: 100%;
+            height: 100%;
+            background: url('bg/bg_jb1.png') no-repeat;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        #main {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            width: 640px;
+            height: 100%;
+            overflow: hidden;
+        }
+        .mark-box{
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            display: none;
+            width: 100%;
+            height: 100%;
+            background:rgba(0,0,0,0.5);
+        }
+        .mark{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin: -216px 0 0 -139px;
+            width:278px;
+            height:432px;
+            background:rgba(255,255,255,1);
+            border-radius:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="main"></div>
+<div class="mark-box">
+    <div class="mark"></div>
+</div>
+
+<script src="js/app/model.js"></script>
+<script src="js/app/gesture.js"></script>
+<script src="js/app/pano.js"></script>
+<script src="js/app/main.js"></script>
+<script type="text/javascript">
+    var mod = main.init();
+    var $box = $('#main').on('touchend',function(){
+        // console.log(mod)
+        // mod.root.position(100, 600, -600).update();
+    })
+    $('.mark').on('click',function(){
+        $(this).parent().hide();
+    })
+</script>
+</body>
+</html>
