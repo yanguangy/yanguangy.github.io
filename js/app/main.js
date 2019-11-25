@@ -34,11 +34,10 @@ var main = Bone.extend({}, Bone.Events, {
         var _self = this;
         gesture.on('move', function (obj) {
             if (!_self.lock) {
-                _self.stage.camera.z<105?_self.stage.camera.z+=15:_self.stage.camera.z =_self.stage.camera.z;
-                _self.stage.update();
-        
                 _self.drag.lon = (_self.drag.lon - obj.ax * 0.2) % 360;
                 _self.drag.lat = Math.max(-90, Math.min(90, _self.drag.lat + obj.ay * 0.2));
+                _self.stage.camera.z<105?_self.stage.camera.z+=15:_self.stage.camera.z =_self.stage.camera.z;
+                _self.stage.update();
             }
         });
         gesture.on('end',function(){
@@ -91,13 +90,12 @@ var main = Bone.extend({}, Bone.Events, {
         if (_lon - this.root.rotationY < -180) this.root.rotationY -= 360;
 
         this.root.rotationY += (_lon - this.root.rotationY) * 1;
-       
-        if(this.root.rotationX + (_lat -this.root.rotationX)*.15<-5){
-            this.root.rotationX = this.root.rotationX;
-        }else{
-            this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
-        }
-    
+        this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
+        // if(this.root.rotationX + (_lat -this.root.rotationX)*.15<-5){
+        //     this.root.rotationX = this.root.rotationX;
+        // }else{
+        //     this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
+        // }
         this.root.updateT();
     },
 

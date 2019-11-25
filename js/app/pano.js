@@ -19,8 +19,6 @@ var pano = Bone.extend({}, Bone.Events, {
     addBg:function(){
         var panoRect = {w: 2898, h: 1144};
         var bgData = [
-           
-            {url: 'bg/p1.png'},
             {url: 'bg/p2.png'},
             {url: 'bg/p3.png'},
             {url: 'bg/p4.png'},
@@ -41,7 +39,7 @@ var pano = Bone.extend({}, Bone.Events, {
             {url: 'bg/p19.png'},
             {url: 'bg/p20.png'},
             {url: 'bg/p21.png'},
-           
+            {url: 'bg/p1.png'},
         ];
         var pano = function(imgs, rect) {
             var _len = imgs.length;
@@ -179,7 +177,7 @@ var pano = Bone.extend({}, Bone.Events, {
         }
     },
     addCus:function(){
-        var panoRect = {w: 2627, h: 414};
+        var panoRect = {w: 2627, h: 690};
         var bgData = [
             {
                 url:'./static/custom/cus1.png'
@@ -328,7 +326,7 @@ var pano = Bone.extend({}, Bone.Events, {
         this.stage.children[1].children[3].addChild(btn);
     },
     addMethods:function(){
-        var panoRect = {w: 2627, h: 512};
+        var panoRect = {w: 2627, h: 690};
         var bgData = [
             {
                 url:'./static/method/method1.png'
