@@ -54,13 +54,13 @@ var main = Bone.extend({}, Bone.Events, {
 
         var orienter = new Orienter();
         orienter.handler = function (obj) {
-            _self.aim.lat = obj.lat;
-            _self.aim.lon = -obj.lon;
+            _self.aim.lat = obj.lat/2;
+            _self.aim.lon = -obj.lon/2;
 
-            // if (_self.lock) {
-            //     _self.fix.lat = -_self.aim.lat;
-            //     _self.fix.lon = -_self.aim.lon;
-            // }
+            if (_self.lock) {
+                _self.fix.lat = -_self.aim.lat;
+                _self.fix.lon = -_self.aim.lon;
+            }
         };
         orienter.init();
 
