@@ -57,10 +57,10 @@ var main = Bone.extend({}, Bone.Events, {
             _self.aim.lat = obj.lat;
             _self.aim.lon = -obj.lon;
 
-            if (_self.lock) {
-                _self.fix.lat = -_self.aim.lat;
-                _self.fix.lon = -_self.aim.lon;
-            }
+            // if (_self.lock) {
+            //     _self.fix.lat = -_self.aim.lat;
+            //     _self.fix.lon = -_self.aim.lon;
+            // }
         };
         orienter.init();
 
@@ -84,7 +84,7 @@ var main = Bone.extend({}, Bone.Events, {
         this.animateId = requestAnimationFrame(this.animate);
 
         var _lon = (this.aim.lon + this.fix.lon + this.drag.lon) % 360;
-        var _lat = (this.aim.lat + this.fix.lat + this.drag.lat) * 0.35;
+        var _lat = (this.aim.lat + this.fix.lat + this.drag.lat) * 0.25;
 
         if (_lon - this.root.rotationY > 180) this.root.rotationY += 360;
         if (_lon - this.root.rotationY < -180) this.root.rotationY -= 360;
