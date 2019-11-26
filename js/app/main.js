@@ -62,7 +62,7 @@ var main = Bone.extend({}, Bone.Events, {
                 _self.fix.lon = -_self.aim.lon;
             }
         };
-        // orienter.init();
+        orienter.init();
 
         this.animate = this.animate.bind(this);
 
