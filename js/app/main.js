@@ -91,11 +91,6 @@ var main = Bone.extend({}, Bone.Events, {
 
         this.root.rotationY += (_lon - this.root.rotationY) * 1;
         this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
-        // if(this.root.rotationX + (_lat -this.root.rotationX)*.15<-5){
-        //     this.root.rotationX = this.root.rotationX;
-        // }else{
-        //     this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
-        // }
         this.root.updateT();
     },
 
