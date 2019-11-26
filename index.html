@@ -6,61 +6,12 @@
     <meta name="description" content=""/>
     <meta name="viewport" content="width=640, user-scalable=no"/>
     <meta name="apple-mobile-web-app-capable" content="yes"/>
-
     <script src="js/libs/zepto.min.js"></script>
     <script src="js/libs/bone.min.js"></script>
     <script src="js/libs/css3d.min.js"></script>
     <script src="js/libs/orienter.min.js"></script>
     <script src="js/libs/jstween.min.js"></script>
-
-    <style>
-        html, body {
-            margin: 0px;
-            width: 100%;
-            height: 100%;
-            background: url('bg/bg_jb1.png') no-repeat;
-            background-size: cover;
-            overflow: hidden;
-        }
-
-        #main {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            width: 640px;
-            height: 100%;
-            overflow: hidden;
-        }
-        .mark-box{
-            position: fixed;
-            left: 0;
-            top: 0;
-            z-index: 2;
-            display: none;
-            width: 100%;
-            height: 100%;
-            background:rgba(0,0,0,0.5);
-        }
-        .mark-card{
-            position: absolute;
-            left: 50%;
-            top: 50%;
-            margin: -216px 0 0 -139px;
-            width:278px;
-            height:432px;
-            background:rgba(255,255,255,1);
-            border-radius:20px;
-        }
-        .mark-list{
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: flex;
-            align-items: center;
-            width: 1390px;
-            height: 252px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
 <div id="main"></div>
@@ -76,7 +27,10 @@
                 <h3 class="mark-dre">模式测试</h3>
                 <p class="mark-detail">创始人王斯旻从全美获奖最多建筑事务所纽约知名设计公司 SOM 辞职归国，从真格基金创业营真驿站中起步，当期真驿站近半创立企业成为精于设计的付费客户，服务了第一个世界知名品牌，联合国教科文组织（UNESCO）。</p>
                 <p class="mark-detail-2">精于设计品牌定名：</p>
-                <p class="mark-detail-3">Whale Design，Design Will。</p>
+                <div class="mark-detail-box">
+                    <p class="mark-detail-3-l">Whale Design</p>
+                    <p class="mark-detail-3-r">，Design Will。</p>
+                </div>
             </li>
             <li class="mark">
                 <h2 class="mark-title">2016</h2>
@@ -87,7 +41,7 @@
                 <h2 class="mark-title">2017</h2>
                 <h3 class="mark-dre">产品研发</h3>
                 <p class="mark-detail">创始人王斯旻被评为福布斯30岁以下精英，被评为中关村高新技术企业、金种子企业，被人民周刊报道，获得青锐创投投资。新服务了华润置地，汇文中学等近百客户，单月产生设计破千幅，领域扩展到产品文创。2.0版本开放，为客户提供好设计的同时，更致力于利用新技术和供应链实现好设计。</p>
-                <p class="mark-detail-2">精于设计再定义：创意，设计，实现，设计与科技双驱动的企业级解决方案服务提供商。</p>
+                <p class="mark-detail-4">精于设计再定义：创意，设计，实现，设计与科技双驱动的企业级解决方案服务提供商。</p>
             </li>
             <li class="mark">
                 <h2 class="mark-title">2018</h2>
@@ -98,25 +52,15 @@
                 <h2 class="mark-title">2019</h2>
                 <h3 class="mark-dre">强势生长</h3>
                 <p class="mark-detail">创始人王斯旻受邀在 TEDxSJTU 发表设计主题相关演讲。精于设计在教育、科技、商业、地产等领域形成了客户间的口碑传播，非常有幸研究性地、创意性地、完整性地为大家带来助力和改变。有望达到销售额数倍增长，客户的复购率，转介绍率依旧持续攀，新服务了中科院、万象城、凯悦酒店、北京大学、凯德置地、高尔夫美巡赛等知名品牌。</p>
-                <p class="mark-detail-2">FUTURE，期待合作……</p>
+                <p class="mark-detail-5">FUTURE，期待合作……</p>
             </li>
         </ul>
     </div>
 </div>
-
 <script src="js/app/model.js"></script>
 <script src="js/app/gesture.js"></script>
 <script src="js/app/pano.js"></script>
 <script src="js/app/main.js"></script>
-<script type="text/javascript">
-    var mod = main.init();
-    var $box = $('#main').on('touchend',function(){
-        // console.log(mod)
-        // mod.root.position(100, 600, -600).update();
-    })
-    $('.mark').on('click',function(){
-        $(this).parent().hide();
-    })
-</script>
+<script src="js/app/common.js"></script>
 </body>
 </html>
