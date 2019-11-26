@@ -67,6 +67,15 @@ var main = Bone.extend({}, Bone.Events, {
         this.animate = this.animate.bind(this);
 
         _self.animateOn();
+        JT.fromTo(this.root.panoBg, 4.2, {
+            rotationY: -720
+        }, {
+            rotationY: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
     },
 
     animateOn: function () {
