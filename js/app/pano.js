@@ -93,7 +93,7 @@ var pano = Bone.extend({}, Bone.Events, {
             name:'aboutTiele',
             position:[182,82,0],
             rotation:[0,0.0],
-            size:[145,112],
+            size:[154,112],
             material:[{
                 image:'./static/about/about_title.png',
                 repeat:'no-repeat',

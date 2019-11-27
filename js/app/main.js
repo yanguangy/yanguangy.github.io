@@ -70,33 +70,56 @@ var main = Bone.extend({}, Bone.Events, {
             _self.animateOn();
         },2000)
         // 添加开场动效
-        // JT.fromTo(this.root.panoBg, 4.2, {
-        //     rotationY: -720
-        // }, {
-        //     rotationY: 0,
-        //     ease: JT.Quad.Out,
-        //     onUpdate: function() {
-        //         this.target.updateT().updateV()
-        //     }
-        // })
-        // JT.fromTo(this.root.panoBg, 4.2, {
-        //     rotationX: -360,
-        // }, {
-        //     rotationX: 0,
-        //     ease: JT.Quad.Out,
-        //     onUpdate: function() {
-        //         this.target.updateT().updateV()
-        //     }
-        // })
-        // JT.fromTo(this.root.panoBg, 4.2, {
-        //     rotationZ: -360,
-        // }, {
-        //     rotationZ: 0,
-        //     ease: JT.Quad.Out,
-        //     onUpdate: function() {
-        //         this.target.updateT().updateV()
-        //     }
-        // })
+        JT.fromTo(this.root.panoBg, 4.2, {
+            rotationY: -720,
+            delay:2,
+        }, {
+            rotationY: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
+        JT.fromTo(this.root.panoBg, 4.2, {
+            rotationX: -360,
+            delay:2,
+        }, {
+            rotationX: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
+        JT.fromTo(this.root.panoBg, 4.2, {
+            rotationZ: -360,
+            delay:2,
+        }, {
+            rotationZ: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        });
+
+        JT.fromTo(this.root.detailList, 4.2, {
+            rotationY: 720,
+        }, {
+            rotationY: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
+        JT.fromTo(this.root.cus, 4.2, {
+            rotationY: 720,
+            delay:2,
+        }, {
+            rotationY: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
     },
 
     animateOn: function () {
