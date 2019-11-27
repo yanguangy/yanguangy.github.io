@@ -57,25 +57,44 @@ var main = Bone.extend({}, Bone.Events, {
             _self.aim.lat = obj.lat;
             _self.aim.lon = -obj.lon;
 
-            if (_self.lock) {
-                _self.fix.lat = -_self.aim.lat;
-                _self.fix.lon = -_self.aim.lon;
-            }
+            // if (_self.lock) {
+            //     _self.fix.lat = -_self.aim.lat;
+            //     _self.fix.lon = -_self.aim.lon;
+            // }
         };
         orienter.init();
 
         this.animate = this.animate.bind(this);
 
         _self.animateOn();
-        JT.fromTo(this.root.panoBg, 4.2, {
-            rotationY: -720
-        }, {
-            rotationY: 0,
-            ease: JT.Quad.Out,
-            onUpdate: function() {
-                this.target.updateT().updateV()
-            }
-        })
+        // 添加开场动效
+        // JT.fromTo(this.root.panoBg, 4.2, {
+        //     rotationY: -720
+        // }, {
+        //     rotationY: 0,
+        //     ease: JT.Quad.Out,
+        //     onUpdate: function() {
+        //         this.target.updateT().updateV()
+        //     }
+        // })
+        // JT.fromTo(this.root.panoBg, 4.2, {
+        //     rotationX: -360,
+        // }, {
+        //     rotationX: 0,
+        //     ease: JT.Quad.Out,
+        //     onUpdate: function() {
+        //         this.target.updateT().updateV()
+        //     }
+        // })
+        // JT.fromTo(this.root.panoBg, 4.2, {
+        //     rotationZ: -360,
+        // }, {
+        //     rotationZ: 0,
+        //     ease: JT.Quad.Out,
+        //     onUpdate: function() {
+        //         this.target.updateT().updateV()
+        //     }
+        // })
     },
 
     animateOn: function () {
