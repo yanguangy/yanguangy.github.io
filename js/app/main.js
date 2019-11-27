@@ -57,16 +57,18 @@ var main = Bone.extend({}, Bone.Events, {
             _self.aim.lat = obj.lat;
             _self.aim.lon = -obj.lon;
 
-            // if (_self.lock) {
-            //     _self.fix.lat = -_self.aim.lat;
-            //     _self.fix.lon = -_self.aim.lon;
-            // }
+            if (_self.lock) {
+                _self.fix.lat = -_self.aim.lat;
+                _self.fix.lon = -_self.aim.lon;
+            }
         };
         orienter.init();
 
         this.animate = this.animate.bind(this);
 
-        _self.animateOn();
+        setTimeout(function(){
+            _self.animateOn();
+        },2000)
         // 添加开场动效
         // JT.fromTo(this.root.panoBg, 4.2, {
         //     rotationY: -720
