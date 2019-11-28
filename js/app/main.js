@@ -121,6 +121,16 @@ var main = Bone.extend({}, Bone.Events, {
                 this.target.updateT().updateV()
             }
         })
+        JT.fromTo(this.root.method, 4.2, {
+            rotationY: 720,
+            delay:2,
+        }, {
+            rotationY: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function() {
+                this.target.updateT().updateV()
+            }
+        })
     },
 
     animateOn: function () {

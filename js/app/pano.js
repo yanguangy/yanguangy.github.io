@@ -558,11 +558,11 @@ var pano = Bone.extend({}, Bone.Events, {
         var bgS = C3D.create({
             type: 'plane',
             name:'sky',
-            size: [429, 371],
+            size: [430, 382],
             position: [0, -600, 0],
             rotation:[-90,0,0],
             scale: [1],
-            material: [{image: './bg/logo.png', bothsides: false}]
+            material: [{image: './bg/logo.png', bothsides: false,repeat:'no-repeat',size:'100% 100%'}]
         });
         this.stage.addChild(bgS);
 
@@ -573,7 +573,7 @@ var pano = Bone.extend({}, Bone.Events, {
             position: [0, 800, 0],
             rotation:[90,0,0],
             scale: [1],
-            material: [{image: './bg/logo.png', bothsides: false}]
+            material: [{image: './bg/logo.png', bothsides: false,repeat:'no-repeat',size:'100% 100%'}]
         });
         this.stage.addChild(bgB);
     },
