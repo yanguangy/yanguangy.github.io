@@ -19,10 +19,12 @@ var main = Bone.extend({}, Bone.Events, {
         $(window).on('resize', function () {
             _self.resize();
         });
-       
-
-        this.initControl();
+        $(window).on('load', function () {
+            _self.resize();
+        });
         this.resize();
+        this.initControl();
+       
         return this;
     }, 
 
