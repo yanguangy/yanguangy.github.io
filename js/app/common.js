@@ -68,4 +68,4 @@ var mod = main.init();
         $('.mark-box').hide();
     })
 
-    mod.resize();
+    mod.stage.size(640, window.innerHeight).update();
