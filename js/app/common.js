@@ -67,3 +67,5 @@ var mod = main.init();
     $('.btn-close').on('click',function(){
         $('.mark-box').hide();
     })
+
+    mod.resize();

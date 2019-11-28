@@ -22,7 +22,7 @@ var main = Bone.extend({}, Bone.Events, {
        
 
         this.initControl();
-        this.resize();
+        // this.resize();
         return this;
     }, 
 
@@ -166,6 +166,7 @@ var main = Bone.extend({}, Bone.Events, {
 
     timeId: null,
     resize: function () {
+        console.log('yna')
         var _self = this;
         if (this.timeId) clearTimeout(this.timeId);
         this.timeId = setTimeout(function () {
