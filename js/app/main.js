@@ -19,9 +19,10 @@ var main = Bone.extend({}, Bone.Events, {
         $(window).on('resize', function () {
             _self.resize();
         });
-        this.resize();
+       
 
         this.initControl();
+        this.resize();
         return this;
     }, 
 
@@ -144,6 +145,12 @@ var main = Bone.extend({}, Bone.Events, {
 
         this.root.rotationY += (_lon - this.root.rotationY) * 1;
         this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
+        // 限制用户视角，
+        // if(this.root.rotationX + (_lat - this.root.rotationX) * 0.15<-10){
+        //     this.root.rotationX += 0;
+        // }else{
+        //     this.root.rotationX += (_lat - this.root.rotationX) * 0.15;
+        // }
         this.root.updateT();
     },
 
