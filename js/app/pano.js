@@ -104,9 +104,9 @@ var pano = Bone.extend({}, Bone.Events, {
         var custitle = C3D.create({
             type:'plane',
             name:'custitle',
-            position:[0,90,72],
+            position:[0,90,35],
             size:[204,128],
-            rotation:[0,32,0],
+            rotation:[0,35,0],
             material:[{
                 image:IMG_SOURCE.cusTitle.url,
                 repeat:'no-repeat',
@@ -114,9 +114,9 @@ var pano = Bone.extend({}, Bone.Events, {
                 bothsides:false,
             }]
         })   
-        var panoRect = {w: 2700, h: 470};
+        var panoRect = {w: 2600, h: 470};
         var pano = function(imgs, rect) {
-            var _len = 27;
+            var _len = 26;
             var _step = rect.w / _len;
             var _radius = Math.floor(_step / 2 / Math.tan(Math.PI / _len)) - 15;
             var _sp = new C3D.Sprite();

@@ -105,7 +105,7 @@ var main = Bone.extend({}, Bone.Events, {
         });
 
         JT.fromTo(this.root.detailList, 3, {
-            rotationY: 360,
+            rotationY: -360,
         }, {
             rotationY: 0,
             ease: JT.Quad.Out,
@@ -114,7 +114,7 @@ var main = Bone.extend({}, Bone.Events, {
             }
         })
         JT.fromTo(this.root.cus, 3, {
-            rotationY: 360,
+            rotationY: -360,
             delay:2,
         }, {
             rotationY: 0,
