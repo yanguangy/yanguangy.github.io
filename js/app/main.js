@@ -122,17 +122,49 @@ var main = Bone.extend({}, Bone.Events, {
             onUpdate: function() {
                 this.target.updateT().updateV()
             }
-        })
-        JT.fromTo(this.root.method, 3, {
-            rotationY: 360,
-            delay:2,
+        });
+
+
+
+
+        JT.fromTo(this.root.detailList.jingy7.btn, 1, {
+            scaleX: 1,
+            scaleY: 1.1
         }, {
-            rotationY: 0,
+            scaleX: 1.1,
+            scaleY: 1,
+            repeat: Infinity,
+            yoyo: true,
+            repeatDelay: 0,
             ease: JT.Quad.Out,
-            onUpdate: function() {
-                this.target.updateT().updateV()
+            onUpdate: function () {
+                this.target.update();
             }
-        })
+        });
+        JT.fromTo(this.root.detailList.jingy7.btnright, 1, {
+            x:326,
+        }, {
+             x:338,
+            repeat: Infinity,
+            yoyo: true,
+            repeatDelay: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function () {
+                this.target.update();
+            }
+        });
+        JT.fromTo(this.root.detailList.jingy7.btnleft, 1, {
+            x:49,
+        }, {
+             x:37,
+            repeat: Infinity,
+            yoyo: true,
+            repeatDelay: 0,
+            ease: JT.Quad.Out,
+            onUpdate: function () {
+                this.target.update();
+            }
+        });
     },
 
     animateOn: function () {
@@ -174,4 +206,5 @@ var main = Bone.extend({}, Bone.Events, {
             _self.stage.size(640, window.innerHeight).update();
         }, 100);
     },
+    
 });
