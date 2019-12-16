@@ -74,7 +74,7 @@ var pano = Bone.extend({}, Bone.Events, {
             material:[{
                 image:IMG_SOURCE.aboutTitile.url,
                 repeat:'no-repeat',
-                size:'cover',
+                size:'176px 109px',
                 bothsides:false,
             }]
         });
@@ -156,7 +156,7 @@ var pano = Bone.extend({}, Bone.Events, {
         var bottom_detail = C3D.create({
             type:'plane',
             naem:'jy4-leader-detail',
-            position:[184,468,0],
+            position:[184,468,20],
             rotation:[0,0,0],
             size:[329,346],
             material:[{
