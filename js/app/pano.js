@@ -262,42 +262,37 @@ var pano = Bone.extend({}, Bone.Events, {
         var jou2019 = C3D.create({
             type:'plane',
             name:'jou2019',
-            position:[187,134,0],
-            size:[330,72],
+            position:[104,160,0],
+            size:[62,24],
             rotation:[0,0,0],
-           
         });
         var jou2018 = C3D.create({
             type:'plane',
             name:'jou2018',
-            position:[238,270,0],
-            size:[227,130],
+            position:[308,318,2],
+            size:[62,24],
             rotation:[0,0,0],
-           
         });
         var jou2017 = C3D.create({
             type:'plane',
             name:'jou2017',
-            position:[152,420,0],
-            size:[216,86],
+            position:[230,438,0],
+            size:[62,24],
             rotation:[0,0,0],
-           
         });
         var jou2016 = C3D.create({
             type:'plane',
             name:'jou2016',
-            position:[231,529,0],
-            size:[198,89],
+            position:[158,558,0],
+            size:[62,24],
             rotation:[0,0,0],
-            
         });
         var jou2015 = C3D.create({
             type:'plane',
             name:'jou2015',
-            position:[170,640,0],
-            size:[179,59],
+            position:[231,625,0],
+            size:[62,24],
             rotation:[0,0,0],
-           
         });
       
         this.stage.children[1].children[5].addChild(joutitle);
@@ -362,7 +357,7 @@ var pano = Bone.extend({}, Bone.Events, {
                 bothsides:false,
             }]
         })   
-        var btn = C3D.create({
+        var btnBg = C3D.create({
             type:'plane',
             name:'btn',
             position:[188,269,0],
@@ -374,16 +369,41 @@ var pano = Bone.extend({}, Bone.Events, {
                 size:'207px 70px',
                 bothsides:false,
             }]
-        })   
-        btn.on('touchend',function(){
+        });
+        var btnText = C3D.create({
+            type:'plane',
+            name:'btnTEXT',
+            position:[188,269,2],
+            size:[207,70],
+            rotation:[0,0,0],
+            material:[{
+                image:IMG_SOURCE.link[4].url,
+                repeat:'no-repeat',
+                size:'207px 70px',
+                bothsides:false,
+            }]
+        });
+        var mobileNum = C3D.create({
+            type:'plane',
+            name:'mobileNum',
+            position:[187,497,0],
+            size:[197,30],
+            rotation:[0,0,0],
+        });
+        mobileNum.on('touchend',function(){
+            window.location.href = 'tel:010-65571901'
+        })
+        btnText.on('touchend',function(){
             // 点击跳转案例详情
             window.location.href = 'https://www.whalesdesign.com/column';
         });
         this.stage.children[1].children[6].addChild(linktitle);
         this.stage.children[1].children[6].addChild(link);
+        this.stage.children[1].children[6].addChild(mobileNum);
         this.stage.children[1].children[6].addChild(btnleft);
         this.stage.children[1].children[6].addChild(btnright);
-        this.stage.children[1].children[6].addChild(btn);
+        this.stage.children[1].children[6].addChild(btnBg);
+        this.stage.children[1].children[6].addChild(btnText);
         
     },
     addLogo:function(){

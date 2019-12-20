@@ -29,10 +29,6 @@ mod.root.children[1].jingy6.jou2018.on('touchend', function () {
     $('.mark-box').show();
 })
 mod.root.children[1].jingy6.jou2019.on('touchend', function () {
-    console.log(
-        'yan'
-    );
-
     window.stepIndex = 5;
     $('.mark-list').css({
         'left': (window.stepIndex - 1) * -474,
