@@ -44,7 +44,7 @@ var model = Bone.extend({}, Bone.Events, {
             timestamp: data.timestamp,  // 必填，生成签名的时间戳
             nonceStr: data.nonceStr,    // 必填，生成签名的随机串
             signature: data.signature,
-            jsApiList:data.jsApiList,
+            jsApiList:["updateAppMessageShareData","updateTimelineShareData"],
         });
 
     // 配置分享到微信
@@ -64,10 +64,6 @@ var model = Bone.extend({}, Bone.Events, {
     };
     wx.updateAppMessageShareData(shareData);
     wx.updateTimelineShareData(shareData);
-    wx.onMenuShareAppMessage(shareData);
-    wx.onMenuShareTimeline(shareData);
-    wx.onMenuShareQQ(shareData);
-    wx.onMenuShareQZone(shareData);
 });
 
 
