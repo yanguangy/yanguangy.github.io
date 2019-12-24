@@ -1,38 +1,51 @@
 var model = Bone.extend({}, Bone.Events, {
     init: function () {
        
-        var request = new XMLHttpRequest();
-        request.onreadystatechange = function () {
-            if (request.readyState === 4) {
-                // 判断响应结果:
-                if (request.status === 200) {
-                    var data = JSON.parse(request.responseText);
-                    console.log(data);
+        // var request = new XMLHttpRequest();
+        // request.onreadystatechange = function () {
+        //     if (request.readyState === 4) {
+        //         // 判断响应结果:
+        //         if (request.status === 200) {
+        //             var data = JSON.parse(request.responseText);
+        //             console.log(data);
                     
-                    wx.config({
-                        debug: false,
-                        appId: data.appId,          // 必填，公众号的唯一标识
-                        timestamp: data.timestamp,  // 必填，生成签名的时间戳
-                        nonceStr: data.nonceStr,    // 必填，生成签名的随机串
-                        signature: data.signature,
-                        jsApiList:data.jsApiList,
-                    });
+        //             wx.config({
+        //                 debug: false,
+        //                 appId: data.appId,          // 必填，公众号的唯一标识
+        //                 timestamp: data.timestamp,  // 必填，生成签名的时间戳
+        //                 nonceStr: data.nonceStr,    // 必填，生成签名的随机串
+        //                 signature: data.signature,
+        //                 jsApiList:data.jsApiList,
+        //             });
                     
                     
-                    return;
+        //             return;
 
-                } else {
+        //         } else {
 
-                    return;
-                }
-            } else {
-                // HTTP请求还在继续...
-            }
-        }
+        //             return;
+        //         }
+        //     } else {
+        //         // HTTP请求还在继续...
+        //     }
+        // }
 
-        // 发送请求:
-        request.open('GET', 'http://api.whalesdesign.com/v1/wechat/getJsSdk?url=http://h5.whalesdesign.com');
-        request.send();
+        // // 发送请求:
+        // request.open('GET', 'http://api.whalesdesign.com/v1/wechat/getJsSdk?url=http://h5.whalesdesign.com');
+        // request.send();
+
+
+
+        var data = JSON.parse("{\"debug\":true,\"beta\":false,\"appId\":\"wx8733b96bf95d8c6d\",\"nonceStr\":\"Cdn7rgUggv\",\"timestamp\":1577173578,\"url\":\"http:\\\/\\\/h5.whalesdesign.com\",\"signature\":\"88e20d099df5ac44f53f55f993f930f28cc25574\",\"jsApiList\":[\"checkJsApi\",\"onMenuShareTimeline\",\"onMenuShareAppMessage\",\"onMenuShareQQ\",\"onMenuShareQZone\",\"hideMenuItems\"]}");
+          
+        wx.config({
+            debug: false,
+            appId: data.appId,          // 必填，公众号的唯一标识
+            timestamp: data.timestamp,  // 必填，生成签名的时间戳
+            nonceStr: data.nonceStr,    // 必填，生成签名的随机串
+            signature: data.signature,
+            jsApiList:data.jsApiList,
+        });
 
     // 配置分享到微信
     wx.ready(function () {
