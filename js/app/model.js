@@ -49,6 +49,7 @@ var model = Bone.extend({}, Bone.Events, {
 
     // 配置分享到微信
     wx.ready(function () {
+    console.log('yan');
     
     var shareData = {
         title: "精于设计品牌介绍",
