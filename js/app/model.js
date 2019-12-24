@@ -17,10 +17,7 @@ var model = Bone.extend({}, Bone.Events, {
                         signature: data.signature,
                         jsApiList:data.jsApiList,
                     });
-                    
-                    
                     return;
-
                 } else {
 
                     return;
